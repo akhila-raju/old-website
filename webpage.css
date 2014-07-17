@@ -1,0 +1,12 @@
+body {
+font-family: Georgia, serif;
+text-align: center;
+background-color: #FFDC64;
+}
+
+img {
+	text-align: right;
+}
+
+a:link {color:#0F1961;}      /* unvisited link */
+a:visited {color:#0F1961;}  /* visited link */
