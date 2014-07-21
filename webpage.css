@@ -1,11 +1,13 @@
 body {
-font-family: Georgia, serif;
-text-align: center;
-background-color: #FFDC64;
+	background-color: #eeecec;
 }
 
 img {
-	text-align: right;
+	height: auto;
+	width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a:link {color:#0F1961;}      /* unvisited link */
