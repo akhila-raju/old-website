@@ -1,0 +1,74 @@
+a {
+	text-decoration: none;
+}
+
+body {
+	background-color: #fff0fc;
+}
+
+div {
+	background-color: #ffffff;
+}
+
+.center {
+	margin-right: auto;
+	margin-left: auto;
+	z-index: 0;
+}
+
+#topbar {
+	width: 954px;
+	overflow: hidden;
+}
+
+#info {
+	float: left;
+}
+
+#media {
+	overflow: hidden;
+}
+
+#mediaimgs {
+	
+}
+
+#github {
+	width: 954px;
+}
+
+#welresproj {
+	width: 954px;
+	overflow: hidden;
+}
+
+#welcome {
+	width: 524px;
+	float: left;
+	margin-left: 8px;
+}
+
+#projects {
+	display: block;
+	margin-top: 7px;
+}
+
+#resproj {
+	overflow: hidden;
+}
+
+#resume {
+	display: block;
+}
+
+#body_whitebox {
+	width: 954px;
+	height: 1102px;
+	display: block;
+}
+
+#copyrightbar {
+	width: 954px;
+	height: 190px;
+	margin: auto;
+}
