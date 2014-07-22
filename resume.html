@@ -1,7 +1,22 @@
-<object data="akhilaraju.pdf" type="application/pdf" width="100%" height="100%">
- 
-  <p>It appears you don't have a PDF plugin for this browser.
-  No biggie... you can <a href="myfile.pdf">click here to
-  download the PDF file.</a></p>
-  
-</object>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="resume.css">
+	<title>Akhila Raju</title>
+	<link rel="shortcut icon" href="initials.ico">
+	<script language="javascript">
+	    function handleMessage(msg) {
+	      alert('got message '+msg);
+	    }
+	    function setupHandler() {
+	      document.getElementById("myPdf").messageHandler = { onMessage: handleMessage };
+	    }
+	</script>
+</head>
+<body onLoad="setupHandler();">
+	<object id="myPdf" type="application/pdf" data="akhilaraju.pdf">
+	Unable to open the PDF file.
+	</object>
+</body>
+</html>
