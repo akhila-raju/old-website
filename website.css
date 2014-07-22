@@ -31,6 +31,15 @@ div {
 
 #mediaimgs {
 	float: 35px auto;
+	margin-top: 34px;
+}
+
+#linkedin {
+	margin-left: 5px;
+}
+
+#twitter {
+	margin-left: 10px;
 }
 
 #github {
