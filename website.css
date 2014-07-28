@@ -28,6 +28,10 @@ div {
 	float: left;
 }
 
+#akhilaraju {
+	float: left;
+}
+
 #media {
 	overflow: hidden;
 	float: left;
@@ -77,7 +81,7 @@ div {
 #body_whitebox {
 	width: 954px;
 	height: 1102px;
-	display: block;
+	margin-top: -16px;
 }
 
 #gitakhilapic {
@@ -92,8 +96,6 @@ div {
 #photos {
 	margin-left: 5px;
 }
-
-
 
 #copyrightbar {
 	width: 954px;
