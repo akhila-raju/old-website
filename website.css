@@ -1,9 +1,13 @@
+* {
+	font-family: 'Lato', sans-serif;
+}
+
 a {
 	text-decoration: none;
 }
 
 body {
-	background-color: #fcfae3;
+	background-color: #fcfcfc;
 	text-align: center;
 }
 
