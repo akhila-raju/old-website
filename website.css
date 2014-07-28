@@ -4,6 +4,7 @@ a {
 
 body {
 	background-color: #fcfae3;
+	text-align: center;
 }
 
 div {
@@ -18,28 +19,34 @@ div {
 
 #topbar {
 	width: 954px;
+	height: 155px;
 	overflow: hidden;
 }
 
 #info {
+	margin-top: 10px;
 	float: left;
 }
 
 #media {
 	overflow: hidden;
+	float: left;
 }
 
 #mediaimgs {
-	float: 35px auto;
-	margin-top: 34px;
+	margin-top: 55px;
+}
+
+#email {
+	margin-left: 24px;
 }
 
 #linkedin {
-	margin-left: 5px;
+	margin-left: 6px;
 }
 
 #twitter {
-	margin-left: 10px;
+	margin-left: 6px;
 }
 
 #github {
