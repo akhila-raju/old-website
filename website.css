@@ -49,10 +49,6 @@ div {
 	margin-left: 6px;
 }
 
-#github {
-	width: 954px;
-}
-
 #welresproj {
 	width: 954px;
 	overflow: hidden;
@@ -61,15 +57,11 @@ div {
 #welcome {
 	width: 524px;
 	float: left;
-	margin-left: 8px;
-}
-
-#projects {
-	display: block;
-	margin-top: 7px;
+	margin: 5px;
 }
 
 #resproj {
+	margin: 5px;
 	overflow: hidden;
 }
 
@@ -77,11 +69,31 @@ div {
 	display: block;
 }
 
+#projects {
+	display: block;
+	margin-top: 9px;
+}
+
 #body_whitebox {
 	width: 954px;
 	height: 1102px;
 	display: block;
 }
+
+#gitakhilapic {
+	width: 957px;
+	margin-bottom: 5px;
+}
+
+#github {
+	margin-right: 5px;
+}
+
+#photos {
+	margin-left: 5px;
+}
+
+
 
 #copyrightbar {
 	width: 954px;
