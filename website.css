@@ -9,6 +9,8 @@ a {
 body {
 	background-color: #ffffff;
 	text-align: center;
+	padding: 0px;
+	margin: 0px;
 }
 
 div {
