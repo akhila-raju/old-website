@@ -7,7 +7,7 @@ a {
 }
 
 body {
-	background-color: #fcfcfc;
+	background-color: #ffffff;
 	text-align: center;
 }
 
@@ -102,7 +102,8 @@ div {
 }
 
 #copyrightbar {
-	width: 954px;
-	height: 170px;
-	margin: auto;
+	background-color: #3982A5;
+	color: white;
+	padding: 50px;
+	margin-top: 30px;
 }
