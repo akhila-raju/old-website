@@ -6,6 +6,14 @@ a {
 	text-decoration: none;
 }
 
+img:hover {
+	opacity: 0.9;
+}
+
+#akhila:hover, #glass:hover {
+	opacity: 1;
+}
+
 body {
 	background-color: #ffffff;
 	text-align: center;
