@@ -6,11 +6,15 @@ a {
 	text-decoration: none;
 }
 
-img:hover {
+img {
 	opacity: 0.9;
 }
 
-#akhila:hover, #glass:hover {
+img:hover {
+	opacity: 1;
+}
+
+#akhila, #glass, #location {
 	opacity: 1;
 }
 
