@@ -6,6 +6,18 @@ a {
 	text-decoration: none;
 }
 
+img {
+	opacity: 0.9;
+}
+
+img:hover {
+	opacity: 1;
+}
+
+#akhila, #glass, #location {
+	opacity: 1;
+}
+
 body {
 	background-color: #ffffff;
 	text-align: center;
