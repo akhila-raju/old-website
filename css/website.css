@@ -4,13 +4,10 @@
 
 a {
 	text-decoration: none;
-}
-
-img {
 	opacity: 0.9;
 }
 
-img:hover {
+a:hover {
 	opacity: 1;
 }
 
