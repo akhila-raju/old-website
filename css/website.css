@@ -2,7 +2,7 @@
 	font-family: 'Lato', sans-serif;
 }
 
-a {
+a, #resproj, #resume {
 	text-decoration: none;
 	opacity: 0.9;
 }
