@@ -34,7 +34,7 @@ var yAxis = d3.svg.axis()
 
 var chart = d3.select(".chart")
     .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("height", height + margin.top + margin.bottom+15)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -79,6 +79,11 @@ d3.csv("pobelter.csv", type, function(error, data) {
     xScale.domain(range(0,23));
     yScale.domain([0, 1]);
 
+    chart.append("text")      // text label for the x axis
+        .attr("x",  width/2)
+        .attr("y",  height+margin.bottom+10)
+        .style("text-anchor", "middle")
+        .text("Hour of Day (0 = Midnight)");
 
     chart.append("g")
         .attr("class", "x axis")
