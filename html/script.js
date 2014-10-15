@@ -85,6 +85,12 @@ d3.csv("pobelter.csv", type, function(error, data) {
         .style("text-anchor", "middle")
         .text("Hour of Day (0 = Midnight)");
 
+    chart.append("text")      // text label for the y axis
+        .attr("transform", "rotate(-90)")
+        .attr("x",  -height/2-25)
+        .attr("y",  -30)
+        .text("Winrate");
+
     chart.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")

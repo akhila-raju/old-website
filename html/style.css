@@ -63,3 +63,7 @@ div {
 .slider-range {
     margin: 20px;
 }
+
+#caption {
+	font-size: 12px;
+}
