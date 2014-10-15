@@ -96,9 +96,9 @@ d3.csv("pobelter.csv", type, function(error, data) {
 
     chart.append("text")      // text label for the y axis
         .attr("transform", "rotate(-90)")
-        .attr("x",  -height/2-85)
+        .attr("x",  -height/2-95)
         .attr("y",  -30)
-        .text("Win Rate (# of Wins / # of Games)");
+        .text("Winrate (# of wins / # of games)");
 
     chart.append("g")
         .attr("class", "x axis")
