@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/website.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+	<title>Akhila Raju</title>
+	<link rel="shortcut icon" href="../images/tabicon.ico">
+	<script type="text/javascript" src="d3/d3.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet">
+
+  	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+</head>
+<body>
+
+	<!-- name, location, email, linkedin, twitter -->
+	<div id="topbar" class="center">
+		<div id="info">
+			<a id="akhilaraju" href="http://www.akhilaraju.com"><img src="../images/akhilaraju.png" width="335" height="140" /></a>
+			<img src="../images/location.png" width="375" height="140" />
+		</div>
+		<div id="media">
+			<div id="mediaimgs">
+				<a id="email" href="mailto:akhilaraju@berkeley.edu"><img src="../images/email.png" height="49" width="49" /></a>
+				<a id="linkedin" href="https://www.linkedin.com/in/akhilaraju"><img src="../images/linkedin.png" height="49" width="49" /></a>
+				<a id="twitter" href="https:www.twitter.com/akhilasraju"><img src="../images/twitter.png" height="49" width="49" /></a>
+			</div>
+		</div>
+	</div>
+
+
+   <div id="layout">
+   		<div id="title">
+   			<p>lolExplore</p>
+   		</div>
+   		<div id="visualization">
+
+            <svg class="chart"></svg>
+            <script type="text/javascript" src="script.js"></script>
+   		</div>
+   		<div id="filters">
+   			<p><u>Filters</u></p>
+            <p>Kills</p>
+            <div id="kills" class="slider-range"></div>
+            <label for="killamount">Kills range:</label>
+            <input type="text" id="killamount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+
+            <p>Deaths</p>
+            <div id="deaths" class="slider-range"></div>
+            <label for="deathamount">Deaths range:</label>
+            <input type="text" id="deathamount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+
+            <p>Assists</p>
+            <div id="assists" class="slider-range"></div>
+            <label for="assistamount">Assists range:</label>
+            <input type="text" id="assistamount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+
+            <p>Wards Placed</p>
+            <div id="wardsPlaced" class="slider-range"></div>
+            <label for="wardamount">Wards range:</label>
+            <input type="text" id="wardamount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+
+         </div>
+   		<div id="infobar">
+            <img id="lollogo" src="http://upload.wikimedia.org/wikipedia/commons/d/d2/League_of_legends_logo.png" />
+   			<p id="info">Fiddle with the filters on the right to explore the top North American player's League of Legends match win rates!</p>
+   		</div>
+   </div>
+
+
+	<!-- copyright bar -->
+	<footer>
+		<p id="copyright">Copyright &copy; Akhila Raju 2014.</p>
+	</footer>
