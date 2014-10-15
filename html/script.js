@@ -38,6 +38,15 @@ var chart = d3.select(".chart")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+function gamesPlayed(data, day){
+    var count = 0;
+    for (i = 0; i<data.length; i++){
+      if (data[i]['timeOfDay'] == day){
+        count++;
+      }
+    }
+    return count;
+}
 
 d3.csv("pobelter.csv", type, function(error, data) {
 
@@ -57,13 +66,11 @@ d3.csv("pobelter.csv", type, function(error, data) {
                d['timeOfDay'] = timeOfDay(d['time']),
                d['winner'] = d['winner']=="True"?1:0;});
 
-  var domainByTrait = {},
-      traits = d3.keys(data[0]),
-      n = traits.length;
-
-    traits.forEach(function(trait) {
-      domainByTrait[trait] = d3.extent(data, function(d) { return d[trait]; });
-    });
+  var tip = d3.tip()
+              .attr('class', 'd3-tip')
+              .offset([-10, 0])
+              .html(function(d) {
+        return "<strong>Games played:</strong> <span style='color:orange'>" + gamesPlayed(data, d[0]) + "</span>";});
 
   dataset = data;
 
@@ -75,6 +82,8 @@ d3.csv("pobelter.csv", type, function(error, data) {
  //     .on("brushend", brushend);
     dayWins = winRate(dataset, 'timeOfDay');
     console.log(dayWins);
+
+    svg.call(tip);
     
     xScale.domain(range(0,23));
     yScale.domain([0, 1]);
@@ -105,9 +114,12 @@ d3.csv("pobelter.csv", type, function(error, data) {
       .enter().append("rect")
         .attr("class", "bar")
         .attr("x", function(d) { return xScale(d[0]); })
-        .attr("y", function(d) { return yScale(d[1]);})
-        .attr("height", function(d) {return height - yScale(d[1]);})
-        .attr("width", xScale.rangeBand());
+        .attr("y", function(d) { return isNaN(d[1])?yScale(0):yScale(d[1]);})
+        .attr("height", function(d) {return isNaN(d[1])||d[1]==0?height-yScale(0.01):height-yScale(d[1]);})
+        .attr("width", xScale.rangeBand())
+        .style("fill", function(d) {return isNaN(d[1])?"red":"steelblue";})
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide);
 
     var maxKills = d3.max(dataset.map(function(d) {return d['kills'];}));
     var maxDeaths = d3.max(dataset.map(function(d) {return d['deaths'];}));
@@ -197,8 +209,7 @@ function winLoss(data, a){
 function winRate(data, a){
   var wins = winLoss(data, a)[0];
   var losses = winLoss(data, a)[1];
-  var xVals = unique(wins.concat(losses));
-  xVals.sort(sortNumber);
+  var xVals = range(d3.min(dataset.map(function(d){return d[a]})), d3.max(dataset.map(function(d){return d[a]})));
   var rates = [];
   for (i = 0; i<xVals.length; i++){
     val = xVals[i]
@@ -214,8 +225,10 @@ function winRate(data, a){
         l++;
       }
     }
-    if (w == 0){
-      rates.push([val,0]);
+    if (w == 0 && l == 0){
+      rates.push([val, NaN]);
+    } else if (w==0){
+      rates.push([val, 0])
     } else if (l == 0){
       rates.push([val, 1]);
     } else {
@@ -323,8 +336,15 @@ function isInRange(datum){
 
 function update(dataset) {
   dayWins = winRate(dataset, 'timeOfDay');
-  console.log(dayWins);
   yScale.domain([0, 1]);
+
+  var tip = d3.tip()
+              .attr('class', 'd3-tip')
+              .offset([-10, 0])
+              .html(function(d) {
+        return "<strong>Games played:</strong> <span style='color:orange'>" + gamesPlayed(dataset, d[0]) + "</span>";});
+
+  svg.call(tip);
 
   var bar = chart.selectAll("rect")
     .data(dayWins, function(d) { return(d); });
@@ -334,8 +354,11 @@ function update(dataset) {
   bar.enter().append("rect")
     .attr("class", "bar")
         .attr("x", function(d) { return xScale(d[0]); })
-        .attr("y", function(d) { return yScale(d[1]);})
-        .attr("height", function(d) {return height - yScale(d[1]);})
-        .attr("width", xScale.rangeBand());
+        .attr("y", function(d) { return isNaN(d[1])?yScale(0):yScale(d[1]);})
+        .attr("height", function(d) {return isNaN(d[1])||d[1]==0?height - yScale(0.01):height-yScale(d[1]);})
+        .attr("width", xScale.rangeBand())
+        .style("fill", function(d) {return isNaN(d[1])?"red":"steelblue";})
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide);
 
 }
