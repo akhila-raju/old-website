@@ -85,11 +85,10 @@ div {
     margin: 20px;
 }
 
-#caption {
+.caption {
 	font-size: 12px;
 }
 
-.chart rect:hover {
-  fill: orangered ;
+#credit {
+  margin-top: 30px;
 }
-

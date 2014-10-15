@@ -2,7 +2,7 @@
 <html>
  <head>
    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-   <title>Test</title>
+   <title>lolExplore</title>
    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
@@ -44,12 +44,14 @@
             <div id="wardsPlaced" class="slider-range"></div>
             <label for="wardamount">Wards range:</label>
             <input type="text" id="wardamount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            <p id="credit" class="caption">Data of player (username: Pobelter) retrieved from League of Legends API. Visualization created by Jimmy Yin and Akhila Raju for CS294: Data Visualization, Fall 2014.</p>
 
          </div>
    		<div id="infobar">
             <img id="lollogo" src="http://upload.wikimedia.org/wikipedia/commons/d/d2/League_of_legends_logo.png" />
-   			<p>Fiddle with the filters on the right to explore the top North American player's League of Legends match win rates above.</p>
-            <p id="caption">Data of player (username: Pobelter) retrieved from League of Legends API. Visualization created by Jimmy Yin and Akhila Raju.</p>
+   			<p class="caption">Fiddle with the filters on the right to explore the top North American player's League of Legends match win rates above.</p>
+            <p class="caption">Hover over each bar to see how many games were played in that hour.</p>
+            <p class="caption">Red lines indicate hours in which there is no data available.</p>
    		</div>
    </div>
  
