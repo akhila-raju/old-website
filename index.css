@@ -141,7 +141,6 @@ ul {
 .row {
   width: 100%;
   display: table;
-  table-layout: fixed; 
 }
 
 .img_wrapper { 
