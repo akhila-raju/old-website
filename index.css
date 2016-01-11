@@ -15,7 +15,7 @@ font-family: 'Alegreya Sans', sans-serif;
 
 a:link, a:visited {
     text-decoration: none;
-    color: #474747;
+    color: black;
 }
 
 .shadow {
@@ -161,9 +161,10 @@ ul {
   margin:1rem 1rem 1rem;
   border-radius:3px;
   display: block;
-  /* f l o a t */
   display: inline-block;
   vertical-align: middle;
+  opacity: 0.75;
+  /* f l o a t */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
@@ -180,6 +181,7 @@ ul {
 .card_wrapper:hover, .card_wrapper:focus, .card_wrapper:active  {
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
+  opacity: 1;
 }
 
 
@@ -189,6 +191,10 @@ ul {
 #portfolio {
   background-image: url("background.jpg");
 }
+
+#portfolio:hover {
+  opacity: 
+;}
 
 
 
@@ -251,7 +257,7 @@ ul {
 
 .medialinks img {
   margin-top: 10px;
-  height: 35px;
+  height: 45px;
 }
 
 #contact {
