@@ -290,27 +290,16 @@ ul {
 
 
 
-/*@media only screen and (max-width: 650px) {
-    #main-nav {
-        border-bottom: 0;
-    }
-    #main-nav ul {
-        display: none;
-        height: auto;
-        width: 100%;
-    }
-    #main-nav li {
-        display: block;
-        float: none;
-        width: 100%;
-    }
-    #main-nav a#pull {
-        display: inline-block;
-        position: absolute;
-        right: 20px;
-        top: 12px;
-    }
-}*/
+@media only screen and (max-width: 650px) {
+  #right_nav {
+    display: none;
+  }
+
+  #akhilabar {
+    text-align: center;
+    float: center;
+  }
+}
 
 
 
