@@ -137,7 +137,7 @@ ul {
 .row {
   width: 100%;
   margin:0px auto;
-  display: table;
+  display: inline-block;
 }
 
 .img_wrapper { 
@@ -161,7 +161,7 @@ ul {
   background:white;
   margin:1rem 1rem 1rem;
   border-radius:3px;
-  display: table-cell;
+  display: block;
   /* f l o a t */
   display: inline-block;
   vertical-align: middle;
@@ -234,7 +234,7 @@ ul {
 #headshot_wrapper{
   height: 270px;
   width: 270px;
-  border: solid 1px #000000;
+  border: solid 0.5px #e4c83a;
   overflow: hidden;
   vertical-align: center;
   margin: auto;
@@ -246,7 +246,6 @@ ul {
 
 .img-circle {
   border-radius: 75%;
-  border-color: #e7464c;
   vertical-align: center;
   position: relative;
 }
