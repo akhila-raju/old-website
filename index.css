@@ -290,14 +290,14 @@ ul {
 
 
 
-@media only screen and (max-width: 650px) {
+/*@media only screen and (max-width: 650px) {
   #right_nav {
     display: none;
   }
 
 }
 
-
+*/
 
 /*#darkgithub, #darklinkedin, #darktwitter {
   display: none;
