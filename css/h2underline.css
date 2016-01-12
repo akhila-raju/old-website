@@ -1,0 +1,13 @@
+h2 {
+  text-decoration: none;
+  display: inline-table;
+}
+
+h2:after {
+  content: "";
+  border-bottom: 0.1em solid #e7464c;
+  display: table-caption;
+  caption-side: bottom;
+  position: relative;
+  margin-top:-0.15em;
+}
