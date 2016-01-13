@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+      <title>Akhila Raju | Yelp Dataset Challenge</title>
+      <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+      <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+      <link href="../css/lolexplore_landing.css" rel="stylesheet">
+      <link href="../css/index.css" rel="stylesheet">
+      <link href="../css/h2underline.css" rel="stylesheet">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+   </head>
+   
+   <body>
+
+   <nav class="nav">
+      <!-- Fixed navigation bar content -->
+      <ul>
+         <li><a id="akhilabar" href="../index.html#akhila">Akhila Raju</a></li>
+         <ul id="right_nav">
+            <li><a href="../index.html#portfolio">Portfolio</a></li>
+            <li><a href="../index.html#media">Media</a></li>
+            <li><a href="../index.html#about">About</a></li>
+         </ul>
+      </ul>
+      <!-- responsive nav bar -->
+<!--        <img id="responsivenav" src="images/menubar.png">
+ -->  </nav>
+      <div class="textbody">
+         <div class="lolexploretext">
+
+            <h1>Yelp Dataset Challenge</h1>
+            <nav class="landingnav">
+               <ul>
+                  <li><a href="#designproblem">Design Problem</a></li> |
+                  <li><a href="#userinterviews">User Interviews</a></li> |
+                  <li><a href="#interviewfindings">Interview Findings</a></li> |
+                  <li><a href="#datawrangling">Data Wrangling</a></li> |
+                  <li><a href="#software">Software Implementation</a></li> |
+                  <li><a href="#design">Design Decisions</a></li> |
+                  <li><a href="#design">Research Paper &amp; Source Code</a></li>
+
+               </ul>
+            </nav>
+
+            <p>Project Partners:
+               <a target="_blank" href="https://www.linkedin.com/in/jimmy-zhou-7a453554">Jimmy Zhou</a>, 
+               <a target="_blank" href="https://www.linkedin.com/in/cecilebasnage">Cecile Basnage</a>
+            </p>
+
+            <p>The Yelp Dataset Challenge project was our final project for <a href="http://vis.berkeley.edu/courses/cs294-10-fa14/wiki/index.php/Main_Page">Data Visualization</a>, a Computer Science graduate course in which we "stud[ied] techniques and algorithms for creating effective visualizations based on principles and techniques from graphic design, visual art, perceptual psychology and cognitive science."</p>
+
+            <div id="designproblem">
+               <h2>Design Problem</h2>
+               <p>Although Yelp provides consumers an efficient way to learn about businesses, there are fewer avenues for business owners themselves to explore data that is relevant to them. Owners do not always have a clear idea of the tradeoffs a multitude of factors – such as price, location, environment, ambiance, play into the success of a business.</p>
+               <p>For problems with high-dimensional data, extracting relevant features is a challenge. We therefore aim to gain more specific insights by filtering business review data across categories. It is known that Yelp ratings have a substantial effect on the success of a business. Simply an extra half-star rating "causes restaurants to sell out 19 percentage points more frequently." However, there currently does not exist a tool for businesses to compare themselves to others in similar categories in order to determine why customers might be rating another business higher. Therefore, a deeper understanding of the various factors behind business success could prove valuable to them. Motivated by the lack of an existing interface for business owners to peruse pertinent data, we set out to create a tool that would help businesses understand their performance relative to others similar to them. This underutilized information has the potential to empower owners to make data-driven decisions in their business.</p>
+               <p>Given how much data Yelp has access to, we found that a business owner-facing application is an area largely unexplored. Such a tool could provide business owners with the insights they need to improve their business in accordance with how customers rate their business.</p>
+            </div>
+
+            <div id="userinterviews">
+               <h2>User Interviews</h2>
+               <p>Initially, we assumed a business comparison tool would be helpful to business owners. We decided to take a user-centered design approach and interview business owners in the cities of Berkeley and San Francisco. We created a set of questions which would allow us to understand how business owners interact with Yelp, and how they compare themselves to competition based on similarity and proximity.</p>
+               <h4><p>Interview Questions:</p></h4>
+               <p>1. What company do you work for?</p>
+               <p>2. What is your job title?</p>
+               <p>3. Describe your company's process of continuous integration.</p>
+               <p>4. What is your role in this process?</p>
+               <p>5. Do you use CI software? If so, which one?</p>
+               <p>6. What do you like about this software?</p>
+               <p>7. If you don't use Solano CI, have you considering using it?</p>
+               <p>8. If you have, what has deterred you from using it?</p>
+               <p>9. Any additional comments about your experience with CI software?</p>
+               <p>We spoke to fifteen businesses, three of which were in Berkeley. After speaking to a few business owners in Berkeley, we found that competition wasn’t something they worried about. These business owners cared much more about providing good products and services. This may be because college students are more concerned with the price and convenience of a business than its quality. Thus, we interviewed business owners in San Francisco, where the consumer base is highly economically and socially diverse. </p>
+               <p>We spoke to a businesses in San Francisco’s Embarcadero and Mission districts. We spoke to businesses varying in age and category. Some had been open for over three decades, whereas others had been started within the last year. Among these businesses were restaurants, clothing stores, an apothecary, and a juice bar.</p>
+            </div>
+
+            <div id="interviewfindings">
+               <h2>Interview Findings</h2>
+               <p>We found that the businesses we spoke to often had a negative view of Yelp; yet all businesses utilize Yelp and check the reviews left by customers at least once a week. Most business owners expressed distaste towards the presence of anonymous "hate" reviews which oftentimes do not provide much insight or suggestions for how a business can improve. When asked about comparison, these businesses expressed in interest in wanting to see general trends in their Yelp reviews, such as how the business is doing over time.</p>
+               <p>Although most businesses were interested primarily in their own business’s trends, some businesses expressed interest in a simple business comparison tool, such as one that can compare their business to those across their category (such as wanting to compare a juice store to all juice stores in San Francisco). These business owners were generally younger-generation entrepreneurs who regularly used Yelp to get insights on the performance of their own business as well as their competitors’. The problem we wanted to approach is to that business owners cannot easily extract useful information and about their business and see trends in the progress of their business. Keeping the human-centered design process in mind, we designed a tool that would allow users to explore businesses and view visualizations of ratings and review content.</p>        
+               <p>We initially designed the tool to allow for exploration; users can enter a category for the type of business, search for a keyword, or change the location. We iterated on this initial design to be more focused towards use by a business owner in comparison to a consumer. In the final design phase, we chose to allow users to enter their business name and enter a location-based filter for which they wanted to compare their businesses. Because this design has one use-case, it is more focused and requires minimal cognitive load on the user.</p>
+            </div>
+
+            <div id="datawrangling">
+               <h2>Data Wrangling</h2>
+               <p>The dataset provided by Yelp was formatted in JSON (JavaScript Object Notation) files, with each file containing one JSON object per line. For this project, we used the business and review data, which contained the variables of interest to us, including business attributes, star ratings, and review metadata.</p>
+               <p>The first step of software implementation involved manipulating the data in a way that could be handled readily by JavaScript and the D3 library. This initial step was done in a Python script. Given the sheer size of the review file (1.05GB), we tested out various JSON decoders and found that UltraJSON, a library written in pure C, gave us the best results. Ultimately, we chose to filter the dataset by a single city (Madison, WI) and store each JSON object in a large array to support decoding by the D3 JSON function. By focusing our implementation on the data of a single city, we reduced the size of the dataset from 42,153 businesses and 1,125,458 reviews to 1,630 businesses and 31,305 reviews. Future implementations of our tool will likely require a way to handle the data of multiple cities, especially in order to support the comparison of data across different areas.</p>
+            </div>
+
+            <div id="software">
+               <h2>Software Implementation</h2>
+               <p>Our implementation primarily utilized D3, a JavaScript library designed for the creation of interactive data visualizations. The library allows for easy linking of data attributes to visual encodings within a relatively flexible framework. Much of our code was drawn from examples by Mike Bostock, a creator of D3. In addition to D3, we also used the Google Maps API to create an interactive map. Styling and website object properties were manipulated via CSS and HTML files.</p>
+               <p>The first tool that we successfully implemented was a map of the city of Madison showing the location of each business in our dataset. In order to support the filtering of businesses by distance, we added the ability to manipulate the businesses shown by means of an interactive slider. Later on, this would become a simple box in which a user could specify a number of miles in which they wish to filter businesses. One difficulty we discovered while filtering businesses was that we would have to keep multiple copies of the data in order to keep track of 1) the businesses within the radius of interest and 2) the businesses within that radius that exist within some category. However, the size of our data was not so large as to make this a problem in terms of efficiency. </p>
+               <p>Next, we used the data to generate samples of the types of graphs we would like to have in our final product. We created functions to generate the following visualizations for a single business: </p>
+               <h4><p>Distribution of Ratings</p></h4>
+               <p>This was implemented as a bar chart showing the frequency of each star rating (1 through 5) for a single business.</p>
+               <p>Number of useful votes vs. star rating: This scatter plot showed every review for a given business, with its x-position representing how many "useful" votes it received and its y-position representing what rating it gave for the business.</p>
+               <h4><p>Ratings over Time</p></h4>
+               <p>This chart was the same as chart 2, but with the date of the review on the x-axis.</p>
+               <p>We also added a function to visualize a group of businesses within a certain category. For this, we chose to plot the number of reviews for each business against its average star rating. Furthermore, this visualization could be filtered by distance from a specified business. Thus, a user could see where their business stands in relation to similar ones in the area. Naturally, if a business owner was interested in seeing its greatest competition, they would look toward the upper right of the chart to see those with the highest average rating and highest number of reviews (as those metrics determine how well a business is perceived by Yelp users). </p>
+               <p>Once we implemented basic versions of the above visualizations, we noticed that oftentimes there were multiple businesses occupying a single point. For reasons of clarity, we needed a way to expose each of these points to better represent all of the businesses at once. Thus, we decided to use D3’s force directed layout functionality, which, by adding a repulsive force to each point, ensured that no collisions occurred between them. We chose to use this approach instead of jittering, which creates randomness across multiple instances of a single graph. Furthermore, we added the ability to toggle this collision detection feature and left it off by default, in order to avoid misleading users regarding the absolute position of the points on each axis. </p>
+               <p>To support selection of a single business, we used a jQuery autocomplete widget to list possible businesses as the user types into a search box. One problem we ran into was duplicate names, as in the case of franchises with multiple locations in Madison (such as Walgreens or Target). Thus, if there were multiple franchises within our dataset, we attached its address alongside it to differentiate between each business. This would allow business owners, who are familiar with the address of their business, to quickly select their business.</p>
+            </div>
+
+            <div id="design">
+               <h2>Design Decisions</h2>
+               <p>We decided to use a d3 library of ColorBrewer palettes. ColorBrewer is an online tool that helps users identify appropriate color schemes. These pre-determined palettes are more perceptually effective because they ensure the viewer can distinguish each color as distinct.</p>
+               <p>Our final product is designed as an interactive display, allowing users to first select a business of interest and indicate the radius in miles which filters the businesses they can compare themselves to. We chose the available mileage to be in the range of 0-20, which covers all other businesses on the map when a business is chosen (including the businesses that are on the corners of the map). We implemented error handling for this feature; in the case that a user inputs a number greater than 20, all of the data is selected, disregarding the radius entered. In the case that a user doesn’t input a number, all data is selected as well.</p>
+               <p>Running time of our application and the time it takes to generate a visualization is instantaneous.</p>
+            </div>
+
+            <div id="findings">
+               <h2>Research Paper &amp; Source Code</h2>
+               <p><a target="_blank" href="../pdfs/yelp/researchpaper.pdf">View Research Paper</a></p>
+               <p><a target="_blank" href="https://github.com/akhila-raju/datavis_finalproject">View Source Code</a></p>
+               <p><a target="_blank" href="../pdfs/yelp/poster.pdf">View Poster</a></p>
+               <p><a target="_blank" href="../pdfs/yelp/presentation.pdf">View Presentation</a></p>
+            </div>
+
+         </div>
+
+         <!-- Footer -->
+
+         <div class="base" id="footer">
+           <p>Copyright &copy; 2016, Akhila Raju. All Rights Reserved.</p>
+         </div>
+      </div>
+
+   </body>
+
+</html>
+
+
+

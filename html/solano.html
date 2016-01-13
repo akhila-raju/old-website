@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+      <title>Akhila Raju | Solano Labs Redesign</title>
+      <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+      <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+      <link href="../css/lolexplore_landing.css" rel="stylesheet">
+      <link href="../css/index.css" rel="stylesheet">
+      <link href="../css/h2underline.css" rel="stylesheet">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+   </head>
+   
+   <body>
+
+   <nav class="nav">
+      <!-- Fixed navigation bar content -->
+      <ul>
+         <li><a id="akhilabar" href="../index.html#akhila">Akhila Raju</a></li>
+         <ul id="right_nav">
+            <li><a href="../index.html#portfolio">Portfolio</a></li>
+            <li><a href="../index.html#media">Media</a></li>
+            <li><a href="../index.html#about">About</a></li>
+         </ul>
+      </ul>
+      <!-- responsive nav bar -->
+<!--        <img id="responsivenav" src="images/menubar.png">
+ -->  </nav>
+      <div class="textbody">
+         <div class="lolexploretext">
+
+            <h1>Solano Labs Onboarding Process Redesign</h1>
+            <nav class="landingnav">
+               <ul>
+                  <li><a href="#designproblem">Design Problem</a></li> |
+                  <li><a href="#designprocess">Design Process</a></li> |
+
+                  <li><a href="#userresearch">User Interviews</a></li> |
+                  <li><a href="#UIcritique">UI Critique</a></li> |
+                  <li><a href="#design">Design Decisions</a></li> |
+                  <li><a href="#finaldesign">Final Design</a></li>
+               </ul>
+            </nav>
+
+            <p>Project Partners:
+               <a target="_blank" href="https://www.linkedin.com/in/winston-li-701b27a0">Winston Li</a>, 
+               <a target="_blank" href="https://www.linkedin.com/in/ryo-mayes-a1583971">Ryo Mayes</a>
+            </p>
+
+            <p>Our client, Solano Labs, is a Continuous Integration platform for large code bases. It is used by many tech companies (including Airbnb and Amazon Web Services) to assist in the deployment of project segments. The product is geared towards Development Operations engineers, whose job is to facilitate the deployment of these project segments.</p>
+
+            <div id="designproblem">
+               <h2>Design Problem</h2>
+               <p>Ninety percent of clients do not successfully complete Solano Labs' free trial, meaning only 10% of potential clients retain their services. However, customer retention is 100%. Solano Labs received complaints from their users about the difficulty of the onboarding process: "too hard to get started," "takes too long," and "configuration is hard to figure out, but great once it's up." Our challenge was to make Solano Labs' CI Onboarding flow simple, through user research, competitive analysis, and creating a prototype of the implementation.</p>
+            </div>
+
+            <div id="designprocess">
+               <p>First, we set about trying to understand the following questions:</p>
+               <h4><p>What is the current product?</p></h4>
+               <p>Solano Labs is a testing and continuous-delivery service that allows for a “faster and smoother” deployment process than other Continuous Integration clients.</p>
+               <p>The problem Solano solves: “I have a multicore computer, but all my rspec and cucumber tests run sequentially.  It would be nice if something could split them up and run them in parallel and then assemble the results.”</p>
+               <h4><p>What to Development Operations engineers do?</p></h4>
+               <p>“DevOps”, a combination of Development and Operations, is “the practice of operations and development engineers participating together in the entire service lifecycle, from design through the development process to production support.”</p>
+               <p>Basically, DevOps engineers smoothen out the process between software developers and the people that handle their finished code. This involves product delivery, quality testing, feature development, and maintenance releases to improve security/reliability of the overall product.</p>
+               <h4><p>What is Continuous Integration? How does CI help its users?</p></h4>
+               <p>Continuous Integration is a big part of DevOps. Basically, in a large-scale project that involves many different individual projects, there has to be a way to seamlessly combine code in an efficient way. Continuous Integration is the technology that allows for this to happen.</p>
+               <h4><p>Who are Solano Labs' competitors?</p></h4>
+               <p>Travis CI, Atlassian Bamboo, Semaphore, Codeship</p>
+               <h4><p>What do the reviews of Solano Labs say?</p></h4>
+               <p>Review on AWS: "Great service for speeding up your test suite"</p>
+               <p>Review on Quora: "Confusing, misleading and crappy UI. This UI has been put together by devs with no regard to the end user. One needs to jumps hoops, remember the paths etc to do basic tasks. There is no way to view all previous results of a build, there is no way to sort by time created etc."</p>
+            </div>
+
+            <div id="userresearch">
+               <p>Initially, we created trial accounts for Solano CI to understand the current design flow for getting the first successful build. The design flow was inconsistent, and made the assumption that the user understood key technical terms and key points of the process. We flagged this as a potential design flaw, and decided to further investigate by interviewing current customers and unsuccessful customer acquisitions.</p>
+               <h2>User Research</h2>
+               <h4><p>Interview Questions</p></h4>
+               <p>1. How do you identify your competition?</p>
+               <p>2. How do you use Yelp to see how your business is doing?</p>
+               <p>3. How does the information you find about your business on Yelp affect your business?</p>
+               <p>4. How do reviews of your competition affect your business?</p>
+               <p>5. If you could compare your store to businesses around you, what would you want to know?</p>
+               <p>6. If you could compare your store to businesses that are similar to you, what would you want to know?</p>
+               <p>7. Tell me about a time when you saw something on Yelp that impacted your business.</p>
+               <p>Unfortunately, it was difficult to find those who fit our user description, so we reached out to Solano Labs’ current clients and received a few responses from them. While they appreciated the speed of Solano Labs’ continuous integration in comparison to its competitors, the ease of use definitely left something to be desired. Due to a small sample size, we were unable to extrapolate significant conclusions.</p>
+            </div>
+
+            <div id="UIcritique">
+<!-- https://docs.google.com/document/d/1sXJw-AilgqYyn6tsQ6jTgvmoQHW2RG_-2i0lzbsRqBQ/edit -->
+               <h2>UI Critique</h2>
+               <p>In addition, I did a critique of the current user interface. To consolidate my findings:</p>
+               <p>Brand on navigation bar is inconsistent with website and sign in/up page (ci.solanolabs.com)</p>
+               <p>Lack design consistency between support.solanolabs.com, solanolabs.com, ci.solanolabs.com, docs.solanolabs.com</p>
+               <p>During the onboard process:</p>
+               <p>Disconnect between the instructions and the authorization buttons in which users select which Github permissions to give Solano CI.</p>
+               <p>Authorize buttons are too small, difficult for users to realize that they can make a selection.</p>
+               <p>Unnecessary instructions which overload the user's cognitive load and further confuse the user.</p>
+               <p>Choosing a different Github permission selection requires making the selection and going through the entire flow again. Changing a selection should be simple and require minimal additional effort.</p>
+               <p>The overall design is overwhelming since it is too cluttered.</p>
+               <p>In conclusion, there are many factors that contribute to a confusing and inconsistent design flow.</p>
+            </div>
+
+            <div id="design">
+               <h2>Design Decisions</h2>
+               <p>We researched the onboarding process of several software services, ranging from other continuous integration platforms to lower-level online applications like Github Pages. A common theme amongst these different software services was that they established a consistent tutorial flow. The user is given a step by step guide with as much assistance as possible, keeping the needs of users of all experience levels in mind and thus minimizing the amount of possible missteps.</p>
+               <p>The design flaw in Solano Labs' onboarding process is that it made the assumption that users understood key technical terminology and key parts of the process, without providing instructions or information on how to carry out these steps. There simply was no tutorial.</p>
+               <p>We decided to create a tutorial flow that shows the user throughout the process, ensuring that any engineer, regardless of level of experience or knowledge, can successfully use the product for the first time.</p>
+            </div>
+
+            <div id="finaldesign">
+               <h2>Final Designs</h2>
+               <img src="../images/solanolabs/solanoone.jpg">
+               <img src="../images/solanolabs/solanotwo.jpg">
+               <img src="../images/solanolabs/solanothree.jpg">
+               <img src="../images/solanolabs/solanoconfigure.jpg">
+               <img src="../images/solanolabs/solanodocs.jpg">
+            </div>
+
+
+         </div>
+
+         <!-- Footer -->
+
+         <div class="base" id="footer">
+           <p>Copyright &copy; 2016, Akhila Raju. All Rights Reserved.</p>
+         </div>
+      </div>
+
+   </body>
+
+</html>
+
+
+

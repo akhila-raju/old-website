@@ -1,3 +1,7 @@
+svg img {
+  block: inline-block;
+}
+
 .d3-tip {
   line-height: 1;
   font-weight: bold;
