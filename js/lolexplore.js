@@ -48,7 +48,7 @@ function gamesPlayed(data, day){
     return count;
 }
 
-d3.csv("pobelter.csv", type, function(error, data) {
+d3.csv("../data/pobelter.csv", type, function(error, data) {
 
   if (error){
     console.log('Error uploading data');
