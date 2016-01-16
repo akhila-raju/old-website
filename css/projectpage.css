@@ -1,0 +1,150 @@
+/* N A V I G A T I O N  B A R */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 46px;
+  background-color: white;
+  font-size: 30px;
+  border-bottom-style: solid;
+  border-bottom-color: #e7464c;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+  display: inline-block;
+  padding: 4px;
+  margin: 2px;
+}
+
+.nav ul li a {
+    padding: 4px 36px;
+    color: black;
+}
+
+.nav ul li a:hover {
+    color: #e7464c;
+}
+
+.nav ul li a:highlight {
+    color: #e7464c;
+}
+
+#right_nav {
+  float: right;
+}
+
+/* F O O T E R */
+
+#footer{
+  padding:30px 0px;
+  text-align:center;
+  background:#e4c83a;
+}
+
+body { 
+    margin:0px auto;
+    padding: 0px;
+font-family: 'Alegreya Sans', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+/* B A S I C S */
+
+.base {
+  text-align: center;
+  padding:50px 0px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+.shadow {
+-webkit-box-shadow: inset 0px 4px 11px -4px rgba(217,217,217,1);
+-moz-box-shadow: inset 0px 4px 11px -4px rgba(217,217,217,1);
+box-shadow: inset 0px 4px 11px -4px rgba(217,217,217,1);
+}
+
+h2{
+  margin:0px 0px 30px 0px;
+}
+
+h4 {
+  margin: 0 0 40px 0;
+}
+
+body { 
+    margin:0px auto;
+    padding: 0px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 20px;
+    color: black;
+    background-image: url("../background.jpg");
+}
+
+.textcontainer {
+  margin-top: 80px;
+}
+
+.pagetext a:link, .pagetext a:visited {
+  color: #e7464c;
+}
+
+.pagetext a:hover {
+  color: #474747;
+}
+
+p, .pagetext {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+}
+
+h2 {
+  padding-top: 25px;
+}
+
+img {
+  margin-left: 25%;
+  width: 50%;
+  margin-right: 25%;
+}
+
+/* u n d e r l i n e */
+h1 {
+  text-decoration: none;
+  display: inline-table;
+}
+
+h1:after {
+  content: "";
+  border-bottom: 0.1em solid #e7464c;
+  display: table-caption;
+  caption-side: bottom;
+  position: relative;
+  margin-top:-0.15em;
+}
+
+/* P A G E  N A V I G A T I O N */
+
+.pagenav ul li {
+  display: inline-block;
+  padding: 4px;
+  margin: 2px auto;
+}
+
+.pagenav {
+  text-align: center;
+  margin: 40px;
+}
