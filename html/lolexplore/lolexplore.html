@@ -80,17 +80,21 @@
                <p>One of our final questions was, how do we handle values with no corresponding data? For example, looking at the distribution of kills, there are no games in which Jimmy got 18 kills. We were thinking of placing an "X" where there are no values, but we decided to leave a blank space (no bars, empty column) where those values are missing. Later on, this became a bit frustrating as an empty space in our graph could signify either an hour in which no games were played or an hour in which all games were lost. As such, we made any hours in which no games are played red to signify that there are no values in that hour. Additionally, we created tooltips which display the number of games in each hour upon mouseover.</p>
             </div>
 
-            <div id="demo">
-               <h2>Demo</h2>
-               <p><a target="_blank" href="http://akhilaraju.com/html/lolexplore/demo.html">View Demo Here</a></p>
-               <p>Our final visualization plots win rate (# of wins / # of games) vs. hour of the day (0-23 hours), and allows for filtering by 4 different variables via sliders: kills, deaths, assists and wards placed. Mousing over a bar in the chart will show a tooltip that displays how many games are in each hour of the day for the current data selection. Red bars indicate hours in which there is no data. Hours on which the win rate is 0 are indicated by a blue line on the x-axis.</p>
-            </div>
+            <h2>Demo</h2>
+            <p>Our final visualization plots win rate (# of wins / # of games) vs. hour of the day (0-23 hours), and allows for filtering by 4 different variables via sliders: kills, deaths, assists and wards placed. Mousing over a bar in the chart will show a tooltip that displays how many games are in each hour of the day for the current data selection. Red bars indicate hours in which there is no data. Hours on which the win rate is 0 are indicated by a blue line on the x-axis.</p>
+            <nav class="pagenav" id="demo">
+               <ul>
+                  <li><a target="_blank" href="http://akhilaraju.com/html/lolexplore/demo.html">View Demo Here</a></li>
+               </ul>
+            </nav>
 
-            <div id="findings">
-               <h2>Findings &amp; Source Code</h2>
-               <p>By playing around with our visualization, we were able to see some clear effects of our variables on winrates. As one would expect, as kills go up, winrate does as well. Winrate is similarly positively correlated with assists, and negatively correlated with deaths. The impact of wards placed was not entirely clear through our visualization. We think that this is due to the fact that the number of wards placed is positively correlated with the length of the game (since players tend to ward throughout the course of the game). Thus, we would need to control for the length of the game in order to properly determine the relationships at play here. In fact, each one of our slider variables is presumably strongly positively correlated with the length of the game, so a future direction would be to account for match length across the entire visualization.</p>
-               <p><a target="_blank" href="https://github.com/akhila-raju/LOL_D3">View Source Code</a></p>
-            </div>
+            <h2>Findings &amp; Source Code</h2>
+            <p>By playing around with our visualization, we were able to see some clear effects of our variables on winrates. As one would expect, as kills go up, winrate does as well. Winrate is similarly positively correlated with assists, and negatively correlated with deaths. The impact of wards placed was not entirely clear through our visualization. We think that this is due to the fact that the number of wards placed is positively correlated with the length of the game (since players tend to ward throughout the course of the game). Thus, we would need to control for the length of the game in order to properly determine the relationships at play here. In fact, each one of our slider variables is presumably strongly positively correlated with the length of the game, so a future direction would be to account for match length across the entire visualization.</p>
+            <nav class="pagenav" id="findings">
+               <ul>
+                  <li><a target="_blank" href="https://github.com/akhila-raju/LOL_D3">View Source Code</a></li>
+               </ul>
+            </nav>
 
          </div>
 

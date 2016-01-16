@@ -61,7 +61,7 @@
                <h4><p>What is the current product?</p></h4>
                <p>Solano Labs is a testing and continuous-delivery service that allows for a “faster and smoother” deployment process than other Continuous Integration clients.</p>
                <p>The problem Solano solves: “I have a multicore computer, but all my rspec and cucumber tests run sequentially.  It would be nice if something could split them up and run them in parallel and then assemble the results.”</p>
-               <h4><p>What to Development Operations engineers do?</p></h4>
+               <h4><p>What do Development Operations engineers do?</p></h4>
                <p>“DevOps”, a combination of Development and Operations, is “the practice of operations and development engineers participating together in the entire service lifecycle, from design through the development process to production support.”</p>
                <p>Basically, DevOps engineers smoothen out the process between software developers and the people that handle their finished code. This involves product delivery, quality testing, feature development, and maintenance releases to improve security/reliability of the overall product.</p>
                <h4><p>What is Continuous Integration? How does CI help its users?</p></h4>
@@ -90,16 +90,16 @@
             <div id="UIcritique">
 <!-- https://docs.google.com/document/d/1sXJw-AilgqYyn6tsQ6jTgvmoQHW2RG_-2i0lzbsRqBQ/edit -->
                <h2>UI Critique</h2>
-               <p>In addition, I did a critique of the current user interface. To consolidate my findings:</p>
-               <p>Brand on navigation bar is inconsistent with website and sign in/up page (ci.solanolabs.com)</p>
-               <p>Lack design consistency between support.solanolabs.com, solanolabs.com, ci.solanolabs.com, docs.solanolabs.com</p>
-               <p>During the onboard process:</p>
-               <p>Disconnect between the instructions and the authorization buttons in which users select which Github permissions to give Solano CI.</p>
-               <p>Authorize buttons are too small, difficult for users to realize that they can make a selection.</p>
-               <p>Unnecessary instructions which overload the user's cognitive load and further confuse the user.</p>
-               <p>Choosing a different Github permission selection requires making the selection and going through the entire flow again. Changing a selection should be simple and require minimal additional effort.</p>
-               <p>The overall design is overwhelming since it is too cluttered.</p>
-               <p>In conclusion, there are many factors that contribute to a confusing and inconsistent design flow.</p>
+               <p>In addition, I did a critique of the current user interface, using <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Nielsen's 10 Usability Heuristics for User Interface Design</a>. In front of each point in my critique is listed the heuristic that is violated:</p>
+               <h4><p>General Website Critique</p></h4>
+               <p>Consistency and standards: Branding is inconsistent with main website and sign in/up page (ci.solanolabs.com). An old version of the brand was still being used on the sign up page.</p>
+               <p>Consistency and standards: There was a clear lack in design consistency between support.solanolabs.com, solanolabs.com, ci.solanolabs.com, docs.solanolabs.com. The UI was markedly different, making it difficult to nagivate different parts of the website, forcing users to relearn the flow of each site.</p>
+               <h4><p>During the onboarding process:</p></h4>
+               <p>Consistency and standards: There is a disconnect between the instructions and the authorization buttons in which users select which Github permissions to give Solano CI. Instructions and options are inconsistent, causing confusion for the user.</p>
+               <p>Aesthetic and minimalist design: The onboarding process contains unnecessary information, which makes important information difficult to point out. This may overload the user's cognitive load and further confuse the user.</p>
+               <p>Flexibility and efficiency of use: Choosing a different Github permission selection requires making the selection and going through the entire onboarding process again. Changing a selection should be simple and require minimal additional effort.</p>
+               <p>Aesthetic and minimalist design: The overall design is overwhelming since it is cluttered with too many images and too much information.</p>
+               <p>In conclusion, there are many factors that contribute to a confusing and inconsistent design flow. In my critique, at least three usability heuristics were violated. </p>
             </div>
 
             <div id="design">
@@ -111,11 +111,16 @@
 
             <div id="finaldesign">
                <h2>Final Designs</h2>
-               <img src="../images/solanolabs/solanoone.jpg">
-               <img src="../images/solanolabs/solanotwo.jpg">
-               <img src="../images/solanolabs/solanothree.jpg">
-               <img src="../images/solanolabs/solanoconfigure.jpg">
-               <img src="../images/solanolabs/solanodocs.jpg">
+               <p><img src="../images/solanolabs/solanoone.jpg"></p>
+               <p>Step 1/4: Connecting repository through Github UI</p>
+               <p><img src="../images/solanolabs/solanotwo.jpg"></p>
+               <p>Step 1/4: Connecting repository through Commit Hook UI</p>
+               <p><img src="../images/solanolabs/solanothree.jpg"></p>
+               <p>Step 1/4: Connecting repository Manually UI</p>
+               <p><img src="../images/solanolabs/solanoconfigure.jpg"></p>
+               <p>Step 2/4: Configure UI</p>
+               <p><img src="../images/solanolabs/solanodocs.jpg"></p>
+               <p>Solano Labs Documentation UI</p>
             </div>
 
 

@@ -1,6 +1,7 @@
 h2 {
   text-decoration: none;
   display: inline-table;
+  text-align: center;
 }
 
 h2:after {
