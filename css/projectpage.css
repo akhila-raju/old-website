@@ -54,7 +54,7 @@ ul {
 body { 
     margin:0px auto;
     padding: 0px;
-font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Alegreya Sans', sans-serif;
     font-size: 20px;
     color: black;
 }
@@ -125,6 +125,15 @@ img {
 h1 {
   text-decoration: none;
   display: inline-table;
+}
+
+.pagetext  {
+  margin: 0px auto;
+  text-align: center;
+}
+
+p {
+  text-align: left;
 }
 
 h1:after {
