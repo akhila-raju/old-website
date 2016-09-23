@@ -127,21 +127,22 @@ ul {
   width:100%;
   color:#fff;
   font-size:36px;
+  margin-bottom: 0;
+  line-height: .75em;
   text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 
                0px 8px 13px rgba(0,0,0,0.1),
                0px 18px 23px rgba(0,0,0,0.1);
   -ms-transform: translate(0,-50%); /* IE 9 */
-    -webkit-transform: translate(0,-50%); /* Safari */
-    transform: translate(0,-50%);  
+  -webkit-transform: translate(0,-50%); /* Safari */
+  transform: translate(0,-50%);  
 }
-
 
 
 /* C A R D S */
 
-.row {
+.cards {
   width: 100%;
-  margin:0px auto;
+  margin: 0px auto;
   display: inline-block;
 }
 
@@ -168,7 +169,6 @@ ul {
   display: block;
   display: inline-block;
   vertical-align: middle;
-  opacity: 0.75;
   /* f l o a t */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -181,14 +181,32 @@ ul {
   transition-property: transform;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
+  /* h o v e r */ /* credit: http://stackoverflow.com/questions/16090401/how-to-lower-opacity-for-everything-but-the-hover-in-a-div */
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
-.card_wrapper:hover, .card_wrapper:focus, .card_wrapper:active  {
+#portfolio-parent:hover > .card_wrapper:not(:hover) {
+    opacity: 0.3;
+}
+
+#awards-parent:hover > .card_wrapper:not(:hover) {
+    opacity: 0.3;
+}
+
+
+/*.card_wrapper:hover, .card_wrapper:focus, .card_wrapper:active  {
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
   opacity: 1;
-}
 
+  outline: 2px solid #e7464c;
+
+  box-shadow: 0 0 0 2pt #e7464c;
+}*/
 
 
 /* P O R T F O L I O */
@@ -201,11 +219,24 @@ ul {
   opacity: 
 ;}
 
+/* P A G E  N A V I G A T I O N */
+
+.pagenav ul li {
+  display: inline-block;
+  padding: 4px;
+  margin: 2px auto;
+}
+
+.pagenav {
+  text-align: center;
+  margin: 40px;
+}
+
 
 
 /* M E D I A */
 
-#media {
+#awards {
   background-color: #f9f9f9;
 }
 
@@ -241,23 +272,15 @@ ul {
   text-align: center;
 }
 
-#headshot_wrapper{
-  height: 270px;
-  width: 270px;
-  border: solid 0.5px #e4c83a;
-  overflow: hidden;
-  vertical-align: center;
-  margin: auto;
-}
-
-#headshot_wrapper img { 
-  width: 270px;
-}
-
-.img-circle {
+/* source: http://stackoverflow.com/questions/25267774/rounded-corners-on-rectangular-image-using-css-only */
+#headshot {
+  background: url("../images/akhila.jpg");
   border-radius: 75%;
-  vertical-align: center;
-  position: relative;
+  border: solid 0.5px #e4c83a;
+  width: 270px;
+  height: 270px;
+  background-size: 600px;
+  background-position: 45% 25%;
 }
 
 .medialinks img {

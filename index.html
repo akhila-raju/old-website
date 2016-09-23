@@ -19,7 +19,7 @@
   			<li><a id="akhilabar" href="#akhila">Akhila Raju</a></li>
   			<ul id="right_nav">
 	  			<li><a href="#portfolio">Portfolio</a></li>
-	  			<li><a href="#media">Media</a></li>
+	  			<li><a href="#awards">Honors &amp; Awards</a></li>
 	  			<li><a href="#about">About</a></li>
 	  		</ul>
   		</ul>
@@ -34,7 +34,8 @@
 	    <div class="shadow" id="akhila">
 	        <div class="header">
 		        <h2>Hey! My name is Akhila.</h2>
-		   		<h4>I am an aspiring Product Manager based in the Bay Area.</h4>
+		   		<h4>I am an aspiring Software Engineer based in the Bay Area.</h4>
+		   		<h5>Check out my portfolio below!</h5>
 		   		<a href="#portfolio"><img src="images/arrow2.png" class="arrow button hvr-bob"></a>
 	        </div>
 	    </div>
@@ -43,11 +44,32 @@
 
 	    <div class="base shadow" id="portfolio">
 
-	        <u><h1 class="black"> Portfolio </h1></u>
+	        <u><h1> Portfolio </h1></u>
 
-	        <div class="row">
+<!--             <nav class="pagenav">
+                <ul>
+                	Filter by: <li><a href="#portfolio">Development</a></li> |                	
+                	<li><a href="#portfolio">Product Management</a></li> |
+                	<li><a href="#portfolio">UI/UX Design</a></li> |
+                	<li><a href="#portfolio">Product Design</a></li> |
+                	<li><a href="#portfolio">User Research</a></li>
+                </ul>
+       		</nav>
+ -->
+	        <div class="cards" id="portfolio-parent">
 
-		        <div class="card_wrapper" id="one">
+		   		<!-- Empty page, must fill -->
+		        <div class="card_wrapper">
+		        	<a href="html/thera.html">
+			   			<div class="img_wrapper">
+			   				<img src="images/thera.jpg">
+			   			</div>
+				        <h3>Thera</h3>
+				        <p>Full-Stack Development, Product Management</p>
+				    </a>
+		   		</div>
+
+		   		<div class="card_wrapper">
 		        	<a href="html/apple.html">
 			   			<div class="img_wrapper">
 			   				<img src="images/apple.jpg">
@@ -57,7 +79,8 @@
 				    </a>
 		   		</div>
 
-		        <div class="card_wrapper" id="one">
+
+		        <div class="card_wrapper">
 		        	<a href="html/geoexplore.html">
 			   			<div class="img_wrapper">
 			   				<img src="images/geoexplore/geoexplore.jpg">
@@ -75,6 +98,16 @@
 			   			</div>
 				        <h3>Beauty and Joy of Computing</h3>
 				        <p>Product Management, MOOC Design</p>
+				    </a>
+		   		</div>
+
+		        <div class="card_wrapper">
+		        	<a href="html/yelp.html">
+			   			<div class="img_wrapper">
+			   				<img src="images/yelp.jpg">
+			   			</div>
+				        <h3>Yelp Dataset Challenge</h3>
+				        <p>User Research, UI/UX Design, Development</p>
 				    </a>
 		   		</div>
 
@@ -98,17 +131,7 @@
 				    </a>
 		   		</div>
 
-		        <div class="card_wrapper" id="two">
-		        	<a href="html/yelp.html">
-			   			<div class="img_wrapper">
-			   				<img src="images/yelp.jpg">
-			   			</div>
-				        <h3>Yelp Dataset Challenge</h3>
-				        <p>User Research, UI/UX Design, Development</p>
-				    </a>
-		   		</div>
-
-		        <div class="card_wrapper" id="three">
+		        <div class="card_wrapper">
 		        	<a href="html/solano.html">
 			   			<div class="img_wrapper">
 			   				<img src="images/solano.jpg">
@@ -181,7 +204,7 @@
 		   		</div>
 
 		   		<!-- Need separate page -->
-		   		<div class="card_wrapper">
+<!-- 		   		<div class="card_wrapper">
 		   			<a href="html/cs10.html">
 			   			<div class="img_wrapper">
 			   				<img src="images/cs10.jpg">
@@ -190,18 +213,18 @@
 				        <p>Game Design, Development, Data Visualization</p>
 				    </html>
 		   		</div>
-
+ -->
 		   	</div>
 
 	    </div>
 
 	    <!-- Media -->
 
-	    <div class="base shadow" id="media">
+	    <div class="base shadow" id="awards" id="awards-parent">
 
-	        <h1> Media </h1>
+	        <h1>Honors &amp; Awards</h1>
 
-	        <div class="row">
+	        <div class="cards" id="awards-parent">
 
 		        <div class="card_wrapper">
 		        	<a target="_blank" href="http://www.dailycal.org/2015/03/03/students-share-ideas-annual-engineering-week/">
@@ -243,12 +266,13 @@
 
 	    	<h1> About </h1>
 	    	<div class="about_wrapper">
-				<div class="img-circle" id="headshot_wrapper">
-			   		<img src="images/akhila.jpg">
+				<div id="headshot_wrapper">
+<!-- 			   		<img src="images/akhila.jpg">
+ -->			   	<img id="headshot">
 			   	</div>
 			   	<div id="abouttext_wrapper">
 
-				    <p> I am currently a Computer Science student at UC Berkeley, graduating in Summer 2016. Currently, I run <a target="_blank" href="http://www.tequity.me">Tequity</a>. Previously, I worked at <a target="_blank" href="http://www.apple.com">Apple</a> and <a target="_blank" href="http://go.sap.com/index.html">SAP Labs</a>. Museums, art, and travel inspire me.</p>
+				    <p> I graduated from UC Berkeley with a B.A. in Computer Science in August 2016. Currently, I advise <a target="_blank" href="http://www.tequity.me">Tequity</a>. Previously, I worked at <a target="_blank" href="http://www.apple.com">Apple</a> and <a target="_blank" href="http://go.sap.com/index.html">SAP Labs</a>. Museums, art, and travel inspire me.</p>
 
 				    <a href="mailto:akhila@berkeley.edu">Let's work together!</a>
 
