@@ -146,6 +146,11 @@ ul {
   display: inline-block;
 }
 
+.hover_container {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .img_wrapper { 
   height: 230px; 
   overflow: hidden;
